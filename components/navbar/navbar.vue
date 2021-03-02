@@ -4,12 +4,14 @@
 			<view class="statusBar" :style="{height:statusBarHeight+'px'}"></view>
 			<view class="search-wrap" :style="{'padding-top':(searchMarginTop?searchMarginTop:6)+'px',width:searchWidth+'px'}">
 				<view class="serach">
-					<view class="serach_icon"></view>
+					<view class="serach_icon">
+						 <uni-icons type="search"/>
+					</view>
 					<view class="serach_text">uni-app__text</view>
 				</view>
 			</view>
 		</view>
-		<view :style="{height:(45 + statusBarHeight)+'px'}">占位</view>
+		<view :style="{height:(45 + statusBarHeight)+'px'}"/>
 	</view>
 </template>
 
@@ -65,9 +67,6 @@
 					padding-left: 10px;
 
 					.serach_icon {
-						width: 10px;
-						height: 10px;
-						border: 1px solid red;
 						margin-right: 10px;
 					}
 				}
