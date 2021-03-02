@@ -63,7 +63,6 @@
 .list-card .card-content .card-content__title {
   font-size: 14px;
   color: #333;
-  font-weight: bold;
   line-height: 1.2;
 }
 .list-card .card-content .card-content__title text {
@@ -97,5 +96,52 @@
 .list-card .card-content .card-content__desc .card-content__desc-browser {
   color: #999;
   line-height: 1.5;
+}
+.list-card.mode-column .card-image {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+  height: 70px;
+}
+.list-card.mode-column .card-image .card-image__item {
+  margin-left: 10px;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.list-card.mode-column .card-image .card-image__item:first-child {
+  margin-left: 0;
+}
+.list-card.mode-column .card-image .card-image__item imge {
+  width: 100%;
+  height: 100%;
+}
+.list-card.mode-column .card-content__desc {
+  margin-top: 10px;
+}
+.list-card.mode-image {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.list-card.mode-image .card-image {
+  width: 100%;
+  height: 100px;
+}
+.list-card.mode-image .card-content {
+  padding-left: 0;
+  margin-top: 10px;
+}
+.list-card.mode-image .card-content .card-content_desc {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  margin-top: 10px;
 }
 

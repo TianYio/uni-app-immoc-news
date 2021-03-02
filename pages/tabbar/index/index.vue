@@ -3,9 +3,9 @@
 		<navbar />
 		<tab :list="tabList" @tabToggle="tabToggle" />
 		<list-scroll>
-			<view v-for="(item,index) in 100" :key="index">
-				<list-card/>
-			</view>
+			<list-card mode='base' />
+			<list-card mode='image' />
+			<list-card mode='column' />
 		</list-scroll>
 	</view>
 </template>
