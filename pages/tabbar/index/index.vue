@@ -1,12 +1,8 @@
 <template>
 	<view class="home">
 		<navbar />
-		<tab :list="tabList" @tabToggle="tabToggle" />
-		<list-scroll>
-			<list-card mode='base' />
-			<list-card mode='image' />
-			<list-card mode='column' />
-		</list-scroll>
+		<tab :list="tabList" :activeIndex="tabIndex" @tabToggle="tabToggle" />
+		<swiper-list class="home-swiper-list" :current="tabIndex" :list="tabList" @swiperToggle="swiperToggle" />
 	</view>
 </template>
 
@@ -14,7 +10,8 @@
 	export default {
 		data() {
 			return {
-				tabList: []
+				tabList: [],
+				tabIndex: 0
 			}
 		},
 		onLoad() {
@@ -37,8 +34,11 @@
 				data,
 				index
 			}) {
-				console.log(data, index)
+				this.tabIndex = index;
 			},
+			swiperToggle(current) {
+				this.tabIndex = current
+			}
 		}
 	}
 </script>
@@ -54,5 +54,12 @@
 		display: flex;
 		flex-direction: column;
 		overflow: hidden;
+
+		.home-swiper-list {
+			flex: 1;
+			box-sizing: border-box;
+			overflow: hidden;
+			// border: 1px solid red;
+		}
 	}
 </style>

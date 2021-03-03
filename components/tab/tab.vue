@@ -16,19 +16,20 @@
 <script>
 	export default {
 		data() {
-			return {
-				activeIndex: 0
-			};
+			return {};
 		},
 		props: {
 			list: {
 				type: Array,
 				required: true
+			},
+			activeIndex: {
+				type: Number,
+				default: 0
 			}
 		},
 		methods: {
 			toggleActiveTab(tab, index) {
-				this.activeIndex = index
 				this.$emit('tabToggle', {
 					data: tab,
 					index
